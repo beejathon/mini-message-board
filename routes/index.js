@@ -16,7 +16,7 @@ const messages = [
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Mini Messageboard', messages: messages });
+  res.render('index', { title: 'Mini Messageboard', messages: messages, key: process.env.SECRET_KEY });
 });
 
 /* GET new post form. */
